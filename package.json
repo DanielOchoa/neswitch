@@ -1,0 +1,21 @@
+{
+  "name": "neswitch",
+  "version": "1.0.0",
+  "description": "Tell me when the Nintendo Switch approaches the MSRP.",
+  "main": "index.js",
+  "author": "Daniel Ochoa <daniel.o.ochoa@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "neswitch": "./index.js"
+  },
+  "dependencies": {
+    "chrome-launcher": "^0.3.2",
+    "commander": "^2.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-import": "^2.7.0"
+  },
+  "false": {}
+}

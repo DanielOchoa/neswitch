@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "airbnb",
+    "eslint:recommended"
+  ],
+  "rules": {
+    "no-console": "off"
+  }
+}
