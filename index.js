@@ -1,15 +1,19 @@
 #!/usr/bin/env node
 
+// https://www.npmjs.com/package/app-module-path
+require('app-module-path').addPath(`${__dirname}/src`);
+
 const program = require('commander');
-const Orchestrator = require('./src/orchestrator');
+const Orchestrator = require('orchestrator');
+const logger = require('utils/logger');
 
 // parser of opts
 const optsParse = opts => {
   try {
     return JSON.parse(opts);
   } catch(e) {
-    console.log('[neswitch]: Passed options are invalid...');
-    console.log('[neswitch]: Error: ', e);
+    logger.log('Passed options are invalid...');
+    logger.log('Error:', e);
     process.exit(1);
   }
 }
