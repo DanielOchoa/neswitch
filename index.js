@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 
-// https://www.npmjs.com/package/app-module-path
-require('app-module-path').addPath(`${__dirname}/src`);
-
 const program = require('commander');
-const Orchestrator = require('orchestrator');
-const logger = require('utils/logger');
+const Orchestrator = require('./build/orchestrator.bundle');
+const logger = require('./src/utils/logger');
 
-// parser of opts
+/*
+ * Option parser for program
+ */
 const optsParse = opts => {
   try {
     return JSON.parse(opts);
@@ -18,6 +17,9 @@ const optsParse = opts => {
   }
 }
 
+/**
+ * Program
+ */
 program
   .version('0.1.0')
   .option('-a, --amazon <options>', 'Amazon scraper', optsParse)
@@ -30,4 +32,7 @@ const orchestrator = new Orchestrator({
   },
 });
 
+/**
+ * Exec
+ */
 orchestrator.run();

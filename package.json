@@ -5,19 +5,33 @@
   "main": "index.js",
   "author": "Daniel Ochoa <daniel.o.ochoa@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack-dev-server",
+    "lint": "./node_modules/.bin/eslint */**"
+  },
   "bin": {
-    "neswitch": "./index.js"
+    "neswitch": "./bin/app.bundle.js"
   },
   "dependencies": {
-    "app-module-path": "^2.2.0",
     "chalk": "^2.0.1",
-    "chrome-launcher": "^0.3.2",
-    "commander": "^2.11.0"
+    "chrome-launcher": "^0.4.0",
+    "chrome-remote-interface": "^0.24.3",
+    "commander": "^2.11.0",
+    "lighthouse-logger": "^1.0.0"
   },
   "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2016": "^6.24.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.2",
-    "eslint-plugin-import": "^2.7.0"
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
   },
   "false": {}
 }
